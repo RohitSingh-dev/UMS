@@ -1,0 +1,10 @@
+@import url(var.css);
+body {
+	background-color: var(--main_bg_color);
+	color: var(--color_gray);
+	font-family: var(--custom-font-family);
+	font-size: 16px;
+	height: 100%;
+	line-height: 1.5;
+	overflow-x: hidden;
+}

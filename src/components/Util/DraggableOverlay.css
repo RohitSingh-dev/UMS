@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    height: 50px; /* Slightly increased height for better design */
+    background-color: rgba(255, 0, 0, 0.9); /* Red background for better contrast */
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Increased shadow for better visibility */
+    padding: 20px;
+    cursor: grab;
+    transition: transform 0.05s ease-out;
+    user-select: none;
+    z-index: 2000;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: flex-start; /* Align the content to the left */
+}
+
+.overlay:active {
+    cursor: grabbing;
+}
+
+.overlay-content {
+    display: flex;
+    align-items: center; /* Vertically center the text and the dot */
+    justify-content: flex-start; /* Align items to the left */
+    width: 100%; /* Make sure the content takes up the full width */
+    text-align: left; /* Align text to the left */
+}
+
+.danger-dot {
+    width: 12px; /* Increased the size for better visibility */
+    height: 12px; /* Increased the size for better visibility */
+    border-radius: 50%;
+    background-color: white; /* Changed dot color to white for contrast */
+    margin-right: 15px; /* Space between dot and text */
+    animation: blink 1s infinite; /* Blinking animation */
+}
+
+/* Keyframes to make the dot blink */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+p {
+    font-size: 14px; /* Slightly larger text for better readability */
+    margin: 0; /* Remove margin to keep the text tight to the dot */
+}
