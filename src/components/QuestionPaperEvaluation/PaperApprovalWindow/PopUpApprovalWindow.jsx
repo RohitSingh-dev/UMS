@@ -23,10 +23,10 @@ import {
   faQuestionCircle
 } from "@fortawesome/free-solid-svg-icons";
 import EvaluatedAnswerScript from "./EvaluatedAnswerScript.jsx";
-import {MIN_HEIGHT, MIN_WIDTH, TEACHER1_COMPARE_COLOR, TEACHER2_COMPARE_COLOR} from "../../Util/AppConstant.jsx";
 import {ConfirmDialog} from 'primereact/confirmdialog';
 import {Checkbox} from 'primereact/checkbox';
 import ComparePageTogglePanel from "./ComparePageTogglePanel.jsx";
+import {MIN_HEIGHT, MIN_WIDTH, TEACHER1_COMPARE_COLOR, TEACHER2_COMPARE_COLOR} from "../../../Util/AppConstant.jsx";
 
 const PopUpApprovalWindow = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0)

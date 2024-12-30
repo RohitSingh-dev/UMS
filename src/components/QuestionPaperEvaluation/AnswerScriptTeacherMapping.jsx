@@ -7,7 +7,8 @@ import {Toast} from 'primereact/toast';
 import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 const AnswerScriptTeacherMapping = () => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

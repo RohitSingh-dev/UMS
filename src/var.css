@@ -6,14 +6,13 @@
 
 /* Black and White colors ----------------------*/
 --color_black:#000000;
---color_gray:#333333;    
+--color_gray:#4b3c5c;    
 --color_gray_light:#666666;
---color_gray_lighter: #bbbbc2;
+--color_gray_lighter:#cbcbd3;
 --color_gray_more_lighter:#f6f6fa;
 --color_light:#f9fbfc;
 --color_white:#ffffff;
 
---color_red:#ff4b0a;
 --color_peach:#f9a894;
 --color_peach_light:#ffcec3;
 --color_sea_green:#09cac9;
@@ -21,8 +20,8 @@
 --color_pink:#df66ce;
 --color_ghost:transparent;
 
---sidebar_bg:#e0e0eb;
---sidebar_font:#333333;
+--sidebar_bg:#664788;
+--sidebar_font:#ffffff;
 
 
 --gradient-style1:linear-gradient(45deg, var(--primary_color) 0%, var(--secondary_color) 100%);
@@ -30,7 +29,7 @@
 --gradient-style3:linear-gradient(45deg, #0460f5  0%, #0befba 100%);
 
 --custom-font-family:'Roboto', sans-serif;
---main_bg_color:#f9fbfc; /* Brand light background color ----------------*/
+--main_bg_color:#f0ebf7; /* Brand light background color ----------------*/
 --primary_btn_color:var(--gradient-style1);
 
 

@@ -10,7 +10,8 @@ import App from "./App";
 import {BrowserRouter} from "react-router-dom";
 import {store} from "./Redux/store.jsx";
 import {Provider} from 'react-redux'
-import {LoadingProvider} from "./components/Util/LoadingContext.jsx";
+import {LoadingProvider} from "./Util/LoadingContext.jsx";
+import '../src/i18n/i18n.js'
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(

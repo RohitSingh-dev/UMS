@@ -12,11 +12,10 @@ import useTimer from "../../../hooks/TImerHook.jsx";
 import {useEffect, useRef, useState} from "react";
 import {ProgressBar} from 'primereact/progressbar';
 import {useDispatch, useSelector} from "react-redux";
-import ProgressModal from "../../Util/progressModal.jsx";
+import ProgressModal from "../../../Util/ProgressModal.jsx";
 import Coordinates from "../../../Model/Coordinates.jsx";
 import useScreenSize from "../../../hooks/widowsSize.jsx";
 import LineSegments from "../../../Model/LineSegment.jsx";
-import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 import CookieHelper from "../../../services/UseCookies.jsx";
 import AnnotationType from "../../../Model/AnnotationType.jsx";
 import tickSvg from "../../../assets/AnnotationIcons/tick.svg";
@@ -33,6 +32,7 @@ import AnnotationService from "../../../services/annotationService.jsx";
 import commonFunctionService from "../../../services/commonFunctionService.jsx";
 import usePreventDeveloperTools from "../../../hooks/usePreventDeveloperTools.jsx";
 import {resetProgress, updateBackendProgress} from "../../../Redux/webSocketSlice.jsx";
+import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 export {axios, Toast, useForm, faMagnifyingGlass, faMagnifyingGlassMinus, faMagnifyingGlassPlus, faSearch, InputText, useTimer, useEffect, useRef, useState, ProgressBar, useSelector, useDispatch, ProgressModal, Coordinates, useScreenSize, LineSegments, JWT_COOKIES_NAME, CookieHelper, AnnotationType, tickSvg, Button, Card, Row, Tab, Tabs, crossSvg, FontAwesomeIcon, eraserSvg, rectSvg, questionMarkSvg, NavLink, useLocation, useNavigate, pencilSvg, webSocketService, AnnotationService, commonFunctionService, updateBackendProgress, resetProgress, usePreventDeveloperTools
 }

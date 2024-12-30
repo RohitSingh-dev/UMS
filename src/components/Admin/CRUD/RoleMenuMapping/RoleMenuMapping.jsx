@@ -4,13 +4,15 @@ import {DataTable} from "primereact/datatable";
 import {useEffect, useRef, useState} from "react";
 import axios from 'axios';
 import CookieHelper from "../../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 import {Dialog} from "primereact/dialog";
 import {PickList} from "primereact/picklist";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconField} from "primereact/iconfield";
 import {InputIcon} from "primereact/inputicon";
 import {InputText} from "primereact/inputtext";
+import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
+import {NavLink} from "react-router-dom";
+import {faPlusCircle} from "@fortawesome/free-solid-svg-icons";
 
 
 const RoleMenuMapping = () => {
@@ -173,8 +175,13 @@ const RoleMenuMapping = () => {
                 <div>
                     <IconField iconPosition="left">
                         <InputIcon className="pi pi-search" />
-                        <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Search Question Type" />
+                        <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Search Role" />
                     </IconField>
+                </div>
+                <div>
+                    <NavLink to="add" className="btn btn-primary-violet mb-4">
+                        <FontAwesomeIcon icon={faPlusCircle}/> Add Role
+                    </NavLink>
                 </div>
             </div>
         );

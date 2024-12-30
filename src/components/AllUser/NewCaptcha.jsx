@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {CAPTCHA_LENGTH} from "../Util/AppConstant.jsx";
 import reloadSvg from "../../assets/refresh.svg";
+import {CAPTCHA_LENGTH} from "../../Util/AppConstant.jsx";
 
 class NewCaptcha extends Component {
   constructor(props) {

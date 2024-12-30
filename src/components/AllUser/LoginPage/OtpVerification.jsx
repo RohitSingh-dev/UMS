@@ -7,7 +7,8 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 import {Toast} from "primereact/toast";
 import {InputOtp} from 'primereact/inputotp';
-import {APP_FOOTER} from "../../Util/AppConstant.jsx";
+
+import {APP_FOOTER} from "../../../Util/AppConstant.jsx";
 
 function OtpVerification({ onBack, contactType, maskedContact }) {
     const [timer, setTimer] = useState(5);

@@ -6,7 +6,8 @@ import QuestionBankCard from "../QuestionBankCard.jsx";
 import PropTypes from "prop-types";
 import axios from "axios";
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 const TrueFalseQuestionTemplateAI = ({question = null, toastRef}) => {
     const {register, handleSubmit, control, formState: {errors}, setValue} = useForm();

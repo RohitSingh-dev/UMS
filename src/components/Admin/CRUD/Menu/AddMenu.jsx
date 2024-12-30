@@ -4,10 +4,10 @@ import {InputText} from "primereact/inputtext";
 import {useForm} from "react-hook-form";
 import axios from "axios";
 import CookieHelper from "../../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 import {useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
 
 
 const AddMenu = () => {

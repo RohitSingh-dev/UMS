@@ -15,7 +15,8 @@ import {
 import PropTypes from "prop-types";
 import axios from "axios";
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 const MCQTypeQuestionTemplateAI = ({setSubmittedQuestionCount, question = null, toastRef}) => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

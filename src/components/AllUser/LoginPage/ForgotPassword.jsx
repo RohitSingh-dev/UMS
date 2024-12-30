@@ -5,7 +5,8 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 import {Toast} from "primereact/toast";
-import {APP_FOOTER} from "../../Util/AppConstant.jsx";
+
+import {APP_FOOTER} from "../../../Util/AppConstant.jsx";
 
 function ForgotPassword({ onSubmit, onBack }) {
     const captchaRef = useRef(null);

@@ -9,7 +9,8 @@ import {addMcqOptions, clearAllMCQs, removeMcqOptions, updateValue} from "../../
 import PropTypes from "prop-types";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 const MCQTypeQuestionTemplate = ({questionPaperConfiguration, setSubmittedQuestionCount, toastRef}) => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

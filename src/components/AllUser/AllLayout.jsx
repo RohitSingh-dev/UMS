@@ -15,8 +15,20 @@ const AllLayout = ({ children }) => {
   const dispatch = useDispatch();
   const sideBarClass = useSelector((state) => state.sidebar.sideBarClass);
 
+  const toggleSubdropdown = (expand) => {
+    const subdropElements = document.querySelectorAll('.subdrop + ul');
+    subdropElements.forEach(element => {
+      if (expand) {
+        element.style.display = 'block';
+      } else {
+        element.style.display = 'none';
+      }
+    });
+  };
+
   const changeSideBarSize = () => {
     dispatch(toggleSidebar());
+    {sideBarClass === 'mini-sidebar' ? toggleSubdropdown(true) : toggleSubdropdown(false)}
   };
 
   const highestRankRoute = HighestRankRoleFunc();

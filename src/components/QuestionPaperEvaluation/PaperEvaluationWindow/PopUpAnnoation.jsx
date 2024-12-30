@@ -45,17 +45,16 @@ import {
     faPencil,
     faQuestionCircle
 } from "@fortawesome/free-solid-svg-icons";
-import {
-    ANNOTATION_HEIGHT,
-    ANNOTATION_WIDTH,
-    MIN_HEIGHT,
-    MIN_WIDTH,
-    NOT_ANSWERED_QUESTION_MARKS
-} from "../../Util/AppConstant.jsx";
 import TogglePanel from "./TogglePanel.jsx";
 import annotationService from "../../../services/annotationService.jsx";
 import TextBox from "../../../Model/TextBox.jsx";
-import {TEXT_AREA_DEFAULT_HEIGHT, TEXT_BOX_DEFAULT_WIDTH, TEXT_BOX_MIN_WIDTH} from "../../../Util/AppConstant.jsx";
+import {
+    ANNOTATION_HEIGHT,
+    ANNOTATION_WIDTH, MIN_HEIGHT, MIN_WIDTH, NOT_ANSWERED_QUESTION_MARKS,
+    TEXT_AREA_DEFAULT_HEIGHT,
+    TEXT_BOX_DEFAULT_WIDTH,
+    TEXT_BOX_MIN_WIDTH
+} from "../../../Util/AppConstant.jsx";
 import CommentBoxEditPanel from "./CommentBoxEditPanel.jsx";
 
 const PopUpAnnotation = () => {

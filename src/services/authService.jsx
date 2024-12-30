@@ -1,7 +1,8 @@
 // src/services/authService.js
 import axios from 'axios';
 import CookieHelper from "./UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../components/Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 
 export const fetchNewToken = async () => {
     try {

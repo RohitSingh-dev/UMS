@@ -1,12 +1,12 @@
 import axios from "axios";
-import MyTree from "../../Util/MyTree.jsx";
+import MyTree from "../../../Util/MyTree.jsx";
 import {Row} from "react-bootstrap";
 import {useEffect, useState} from 'react';
 import styles from './Subject.module.css';
 import {useLocation} from "react-router-dom";
 import {ScrollPanel} from 'primereact/scrollpanel';
-import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 import CookiesHelper from "../../../services/UseCookies.jsx";
+import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 function MarksEntryOverallView() {
     const location = useLocation();

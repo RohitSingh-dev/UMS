@@ -5,7 +5,8 @@ import SockJS from 'sockjs-client';
 import {store} from "../Redux/store.jsx";
 import {updateBackendProgress, updateBackendProgressStatus} from "../Redux/webSocketSlice.jsx";
 import CookieHelper from "./UseCookies.jsx";
-import {JWT_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../components/Util/AppConstant.jsx";
+
+import {JWT_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../Util/AppConstant.jsx";
 
 class WebSocketService {
     constructor() {

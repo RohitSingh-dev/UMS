@@ -4,13 +4,8 @@ import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
 import {
-    JWT_COOKIES_NAME, JWT_REFRESH_COOKIES_NAME, REFRESH_TOKEN_COOKIES_NAME,
-    ROLE_ADMIN,
-    ROLE_BOS,
-    ROLE_COOKIES_NAME,
-    ROLE_STUDENT,
-    ROLE_TEACHER,
-    USERNAME_COOKIES_NAME,
+    JWT_REFRESH_COOKIES_NAME,
+
 } from "../Util/AppConstant";
 import Captcha from "./Captcha";
 import {NavLink, useNavigate} from "react-router-dom";
@@ -18,6 +13,15 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash, faLock, faUser,} from "@fortawesome/free-solid-svg-icons";
 import {Button} from "react-bootstrap";
 import {Toast} from 'primereact/toast';
+import {
+    JWT_COOKIES_NAME,
+    REFRESH_TOKEN_COOKIES_NAME,
+    ROLE_ADMIN,
+    ROLE_BOS, ROLE_COOKIES_NAME,
+    ROLE_STUDENT,
+    ROLE_TEACHER,
+    USERNAME_COOKIES_NAME
+} from "../../Util/AppConstant.jsx";
 
 function Login() {
     const [userName, setUserName] = useState("");

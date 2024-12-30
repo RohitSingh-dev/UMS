@@ -2,10 +2,10 @@ import {faBell, faGlobe} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import userPic from "../../assets/UserDocument/Images/avatar.jpg";
 import {useEffect, useRef, useState} from "react";
-import {ROLE_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../Util/AppConstant.jsx";
 import {NavLink, useNavigate} from "react-router-dom";
-import {logOut} from "../Util/commonFunction.jsx";
+import {logOut} from "../../Util/commonFunction.jsx";
 import CookieHelper from "../../services/UseCookies.jsx";
+import {ROLE_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 function HeaderUserMenu() {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);

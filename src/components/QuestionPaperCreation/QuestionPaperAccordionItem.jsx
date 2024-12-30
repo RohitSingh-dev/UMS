@@ -3,7 +3,8 @@ import {Column} from 'primereact/column';
 import PropTypes from "prop-types";
 import {useEffect, useState} from "react";
 import {InputText} from "primereact/inputtext";
-import {QuestionTypes} from "../Util/AppConstant.jsx";
+
+import {QuestionTypes} from "../../Util/AppConstant.jsx";
 
 const QuestionPaperAccordionItem = ({data, selectedQuestions, onSelectionChange, renderHeader, toastRef}) => {
     const MAX_SELECTION = data[0]?.no_of_required_questions;

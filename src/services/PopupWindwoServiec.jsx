@@ -1,4 +1,4 @@
-import {MIN_HEIGHT, MIN_WIDTH} from "../components/Util/AppConstant.jsx";
+import {MIN_HEIGHT, MIN_WIDTH} from "../Util/AppConstant.jsx";
 
 const openPopupWindow = (url, title, data, onCleanup) => {
     const width = Math.max(MIN_WIDTH, window.screen.width);

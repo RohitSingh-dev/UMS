@@ -1,7 +1,7 @@
 import {fetchNewToken} from "../services/authService.jsx";
 import CookieHelper from "../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../components/Util/AppConstant.jsx";
 import {axiosInstance} from "./axiosInstance.jsx";
+import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 
 const apiCall = async ({
                            url,

@@ -6,8 +6,8 @@ import {useEffect, useRef, useState} from "react";
 import {Toast} from "primereact/toast";
 import {ConfirmDialog} from "primereact/confirmdialog";
 import {useScreenSize} from "../PaperEvaluationWindow/PopUpAnnoationImports.jsx";
-import {TEACHER1_COMPARE_COLOR} from "../../Util/AppConstant.jsx";
 import useDrag from "../../../hooks/useDrag.jsx"
+import {TEACHER1_COMPARE_COLOR} from "../../../Util/AppConstant.jsx";
 
 const EvaluatedAnswerScript = ({background, allImages, activeImageIndex, teacher, givenMarks, onScroll, syncWithScroll, toast, zoomScale, imageRatio, fullMarks}) => {
     const [isFullscreen, setIsFullscreen] = useState(false);

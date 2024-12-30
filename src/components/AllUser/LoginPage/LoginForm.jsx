@@ -3,13 +3,6 @@ import {useEffect, useRef, useState} from "react";
 import {useNavigate} from "react-router-dom";
 import axios from "axios";
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {
-    APP_FOOTER,
-    JWT_COOKIES_NAME,
-    REFRESH_TOKEN_COOKIES_NAME,
-    ROLE_COOKIES_NAME,
-    USERNAME_COOKIES_NAME
-} from "../../Util/AppConstant.jsx";
 import fullLogo from "../../../assets/productLogo/fullLogo.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
@@ -19,6 +12,12 @@ import {Button} from "react-bootstrap";
 import PropTypes from "prop-types";
 import {HighestRankRoleFunc} from "../Util/HighestRankRoleFunc.jsx";
 import {useDispatch} from "react-redux";
+import {
+    APP_FOOTER, JWT_COOKIES_NAME,
+    REFRESH_TOKEN_COOKIES_NAME,
+    ROLE_COOKIES_NAME,
+    USERNAME_COOKIES_NAME
+} from "../../../Util/AppConstant.jsx";
 
 function LoginForm({onToggle}) {
     const [userName, setUserName] = useState("");

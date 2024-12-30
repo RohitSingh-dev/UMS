@@ -21,11 +21,7 @@ const Breadcrumb = ({breadcrumbItems, header}) => {
                             );
                         })}
                     </ul>
-
-                    <div
-                        className="d-block d-xl-flex d-lg-flex d-md-flex d-sm-flex justify-content-between d-xl-flex d-lg-flex d-md-flex d-sm-block">
-                        <h3 className="page-title dashboard-page-title">{header || lastItemName}</h3>
-                    </div>
+                    <h3 className="page-title dashboard-page-title">{header || lastItemName}</h3>
                 </div>
             </div>
         </div>

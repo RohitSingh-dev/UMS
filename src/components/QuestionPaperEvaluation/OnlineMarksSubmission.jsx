@@ -6,7 +6,6 @@ import openPopupWindow from "../../services/PopupWindwoServiec.jsx";
 import TeacherLayout from "../Teacher/TeacherLayout.jsx";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 import ModeratorPaperPdfViewer from "../QuestionPaperCreation/ModeratorPaperPdf.jsx";
 import {IconField} from "primereact/iconfield";
 import {InputIcon} from "primereact/inputicon";
@@ -14,7 +13,8 @@ import {InputText} from "primereact/inputtext";
 import {resetQuestionDetails} from "../../Redux/questionDetailsSlice.jsx";
 import {useDispatch} from "react-redux";
 import apiCall from "../../Axios/APIHelper.jsx";
-import CustomeLoader from "../Util/CustomeLoader.jsx";
+import CustomeLoader from "../../Util/CustomLoader.jsx";
+import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 const OnlineMarksSubmission = () => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

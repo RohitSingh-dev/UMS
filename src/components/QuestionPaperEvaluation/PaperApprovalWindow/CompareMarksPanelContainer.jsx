@@ -1,6 +1,7 @@
 import {Button, InputText} from "../PaperEvaluationWindow/PopUpAnnoationImports.jsx";
 import PropTypes from "prop-types";
-import {NOT_ANSWERED_QUESTION_MARKS} from "../../Util/AppConstant.jsx";
+
+import {NOT_ANSWERED_QUESTION_MARKS} from "../../../Util/AppConstant.jsx";
 
 const CompareMarksPanelContainer = ({teacher_evaluation,teacher, givenMarks, background, fullMarks}) => {
   return (

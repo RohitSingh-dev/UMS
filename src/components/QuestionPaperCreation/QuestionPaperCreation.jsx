@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import QuestionBankCard from "./QuestionBankCard.jsx";
 import TeacherLayout from "../Teacher/TeacherLayout.jsx";
-import {LOAD_CHAPTER, SEARCH_TEMPLATE} from "../../Util/AppConstant.jsx";
+import {JWT_COOKIES_NAME, LOAD_CHAPTER, SEARCH_TEMPLATE} from "../../Util/AppConstant.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 import QuestionConfigurationAccordionItem from "./QuestionConfigurationAccordianItem.jsx";
@@ -10,7 +10,6 @@ import QuestionPaperAccordionItem from "./QuestionPaperAccordionItem.jsx";
 import QuestionPaperModal from "./QuestionPaperModal.jsx";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 import ModeratorPaperPdfViewer from "./ModeratorPaperPdf.jsx";
 import QuestionPaperDetailButton from "./QuestionPaperDetailButton.jsx";
 import apiCall from "../../Axios/APIHelper.jsx";

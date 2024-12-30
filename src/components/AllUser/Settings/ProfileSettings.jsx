@@ -3,9 +3,9 @@ import {faCamera} from "@fortawesome/free-solid-svg-icons";
 import {useState} from "react";
 import PhotoDialogForSettings from "./PhotoDialogForSettings.jsx";
 import PropTypes from "prop-types";
-import {ROLE_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 import CookieHelper from "../../../services/UseCookies.jsx";
 import {Calendar} from 'primereact/calendar';
+import {ROLE_COOKIES_NAME, USERNAME_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 const ProfileSettings = ({toast}) => {
     const [visible, setVisible] = useState(false);

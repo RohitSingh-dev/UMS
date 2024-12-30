@@ -1,5 +1,6 @@
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {ROLE_ADMIN, ROLE_BOS, ROLE_COOKIES_NAME, ROLE_STUDENT, ROLE_TEACHER} from "../../Util/AppConstant.jsx";
+
+import {ROLE_ADMIN, ROLE_BOS, ROLE_COOKIES_NAME, ROLE_STUDENT, ROLE_TEACHER} from "../../../Util/AppConstant.jsx";
 
 export function HighestRankRoleFunc() {
 

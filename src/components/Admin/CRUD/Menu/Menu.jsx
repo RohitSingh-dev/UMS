@@ -7,13 +7,13 @@ import {DataTable} from "primereact/datatable";
 import {useEffect, useRef, useState} from "react";
 import axios from 'axios';
 import CookieHelper from "../../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 import {InputText} from "primereact/inputtext";
 import {PickList} from "primereact/picklist";
 import {Dialog} from "primereact/dialog";
 import {Dropdown} from "primereact/dropdown";
 import {IconField} from "primereact/iconfield";
 import {InputIcon} from "primereact/inputicon";
+import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
 
 const Menu = () => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

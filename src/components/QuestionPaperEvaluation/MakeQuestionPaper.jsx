@@ -3,8 +3,8 @@ import {useState} from "react";
 import {Button, Card} from "react-bootstrap";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 import TeacherLayout from "../Teacher/TeacherLayout.jsx";
+import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 function MakeQuestionPaper() {
     const {register, handleSubmit, formState: {errors}} = useForm();

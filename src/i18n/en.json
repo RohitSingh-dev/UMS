@@ -1,0 +1,178 @@
+{
+    "translation": {
+        "grievance": {
+            "header": "Grievance",
+            "fields": {
+                "subject": "Subject",
+                "details": "Details",
+                "uploadFiles": "Upload Files",
+                "emptyTemplate": "Drag and drop files here or click to browse."
+            }
+        },
+        "grievanceList": {
+            "header": "Grievance List",
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "grievance": "Grievance"
+            },
+            "filters": {
+                "ticketNumber": "Search with ticket number",
+                "date": "Select Date",
+                "status": "All Status"
+            },
+            "table": {
+                "columns": {
+                    "id": "#",
+                    "subject": "Subject",
+                    "status": "Status",
+                    "date": "Date",
+                    "actions": "Actions"
+                },
+                "pagination": {
+                    "show": "Show",
+                    "entries": "entries"
+                },
+                "viewDetails": "View"
+            },
+            "entries": [
+                {
+                    "id": "01",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "New",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "02",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Inprogress",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "03",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Hold",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "04",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Escalated",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "05",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Resolved",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "06",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Closed",
+                    "date": "19-12-2024"
+                },
+                {
+                    "id": "07",
+                    "subject": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "status": "Rejected",
+                    "date": "19-12-2024"
+                }
+            ],
+            "statusOptions": [
+                {
+                    "label": "All Status",
+                    "value": null
+                },
+                {
+                    "label": "New",
+                    "value": "New"
+                },
+                {
+                    "label": "Inprogress",
+                    "value": "Inprogress"
+                },
+                {
+                    "label": "Hold",
+                    "value": "Hold"
+                },
+                {
+                    "label": "Escalated",
+                    "value": "Escalated"
+                },
+                {
+                    "label": "Resolved",
+                    "value": "Resolved"
+                },
+                {
+                    "label": "Closed",
+                    "value": "Closed"
+                },
+                {
+                    "label": "Rejected",
+                    "value": "Rejected"
+                }
+            ],
+            "settings": {
+                "pagination": {
+                    "entriesPerPage": [
+                        10,
+                        25,
+                        50,
+                        100
+                    ],
+                    "defaultEntries": 10
+                }
+            }
+        },
+        "grievanceDetail": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "grievance": "Grievance",
+                "details": "Details"
+            },
+            "header": "Grievance Details",
+            "userDetailCard": {
+                "subject": "Subject",
+                "name": "Name",
+                "regNo": "Registration No",
+                "award": "Award",
+                "sem": "Semester",
+                "email": "Email",
+                "mobile": "Mobile"
+            },
+            "status": {
+                "hold": "Hold on",
+                "date": "{{date}}"
+            },
+            "grievanceDetailCard": {
+                "name": "Name",
+                "iconAlt": "User Icon",
+                "date": "{{date}}",
+                "description": "Description",
+                "uploadItems": "Upload items",
+                "uploadFiles": {
+                    "pdf": "PDF File",
+                    "doc": "Word Document",
+                    "image": "Image File"
+                },
+                "buttons": {
+                    "reply": "Reply",
+                    "assign": "Assign to"
+                }
+            },
+            "dialog": {
+                "new": "New"
+            }
+        },
+        "files": {
+            "pdf": "PDF File",
+            "word": "Word Document",
+            "image": "Image File"
+        },
+        "general": {
+            "close": "Close",
+            "submit": "Submit",
+            "edit": "Edit"
+        }
+    }
+}

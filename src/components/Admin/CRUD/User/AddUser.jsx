@@ -4,7 +4,6 @@ import {InputText} from "primereact/inputtext";
 import {Controller, useForm} from "react-hook-form";
 import axios from "axios";
 import CookiesHelper from "../../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 import {useEffect, useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import {Dropdown} from "primereact/dropdown";
@@ -12,6 +11,7 @@ import {setColleges, setDesignations, setDisciplines} from "../../../../Redux/se
 import {useDispatch, useSelector} from "react-redux";
 import {Calendar} from "primereact/calendar";
 import moment from "moment";
+import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
 
 
 const AddUser = () => {

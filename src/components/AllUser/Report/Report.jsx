@@ -2,10 +2,10 @@ import TeacherLayout from "../../Teacher/TeacherLayout.jsx";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 import {useLocation} from "react-router-dom";
 import LinkButton from "../LinkButton.jsx";
 import {useSelector} from "react-redux";
+import {JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 const Report = () => {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

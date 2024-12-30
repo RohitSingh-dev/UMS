@@ -6,8 +6,8 @@ import {useEffect, useState} from "react";
 import commonFunctionService from "../../services/commonFunctionService.jsx";
 import axios from "axios";
 import CookiesHelper from "../../services/UseCookies.jsx";
-import {JWT_COOKIES_NAME} from "../Util/AppConstant.jsx";
 import apiCall from "../../Axios/APIHelper.jsx";
+import {JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 function TeacherDashBoard() {
     const token = CookiesHelper.getCookie(JWT_COOKIES_NAME);

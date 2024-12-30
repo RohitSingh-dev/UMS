@@ -1,7 +1,6 @@
 import UserDetailsCard from "../AllUser/UserDetailsCard";
 import UserDetailsCardContent from "../AllUser/UserDetailsCardContent";
 import WarningAlert from "../AllUser/WarningAlert";
-import {Alert_Error, JWT_COOKIES_NAME} from "../Util/AppConstant";
 import StudentLayout from "./StudentLayout";
 import userPic from "../../assets/UserDocument/Images/avatar.jpg";
 import userSign from "../../assets/UserDocument/Images/image.png";
@@ -11,6 +10,7 @@ import {faArrowAltCircleDown, faFileAlt, faPenFancy,} from "@fortawesome/free-so
 import ActionButton from "../AllUser/ActionButton.jsx";
 import axios from "axios";
 import CookieHelper from "../../services/UseCookies.jsx";
+import {Alert_Error, JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
 
 function StudentDashboard() {
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

@@ -7,7 +7,8 @@ import PhotoDialogForSettings from "./PhotoDialogForSettings.jsx";
 import PropTypes from "prop-types";
 import axios from "axios";
 import CookieHelper from "../../../services/UseCookies.jsx";
-import {APP_FOOTER, JWT_COOKIES_NAME} from "../../Util/AppConstant.jsx";
+
+import {APP_FOOTER, JWT_COOKIES_NAME} from "../../../Util/AppConstant.jsx";
 
 const BrandingSettings = ({toast}) => {
   const token = CookieHelper.getCookie(JWT_COOKIES_NAME);

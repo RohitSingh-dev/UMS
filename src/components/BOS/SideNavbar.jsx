@@ -1,7 +1,7 @@
 import {faBook, faCog, faSignOutAlt, faThLarge, faUserGear,} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NavLink, useNavigate} from "react-router-dom";
-import {logOut} from "../Util/commonFunction";
+import {logOut} from "../../Util/commonFunction.jsx";
 import {useDispatch} from "react-redux";
 
 
