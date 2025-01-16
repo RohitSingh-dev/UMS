@@ -5,16 +5,18 @@ import apiCall from "../../../../Axios/APIHelper.jsx";
 import AdminLayout from "../../AdminLayout.jsx";
 import AddDataCard from "../AddDataCard.jsx";
 import {InputText} from "primereact/inputtext";
+import {useTranslation} from "react-i18next";
 
 const AddAwardType = () => {
+    const { t } = useTranslation();
     const toast = useRef(null)
     const navigate = useNavigate()
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Award Type", url: '/admin/crud/award-type'},
-        {name: "Add Award Type"}
+        { name: t("awardType.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("awardType.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("awardType.breadcrumb.award_type"), url: "/admin/crud/award-type" },
+        { name: t("awardType.breadcrumb.add_award_type") },
     ];
 
     const {register, handleSubmit, formState: {errors}} = useForm();

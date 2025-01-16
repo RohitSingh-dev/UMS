@@ -3,12 +3,14 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSave} from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
 
-const AddDataCard = ({children, onSave, header, isSubDataCard}) => {
+const AddDataCard = ({children, onSave, header, isSubDataCard, isCard = true}) => {
   return(
-      <div className='card'>
-          <div className="card-header mb-3">
-              <h5 className="card-title">{header}</h5>
-          </div>
+      <div className={`${isCard ?'card' : ''}`}>
+          {header &&
+              (<div className="card-header mb-3">
+                  <h5 className="card-title">{header}</h5>
+              </div>)
+          }
           {children}
           <div className={`mt-4 ${isSubDataCard? 'd-none' : ''}`}>
               <NavLink to="javascript:void(0)" className="btn btn-primary-violet" onClick={onSave}>
@@ -23,6 +25,7 @@ AddDataCard.propTypes = {
     children: PropTypes.node,
     onSave: PropTypes.func,
     header: PropTypes.string,
-    isSubDataCard: PropTypes.bool
+    isSubDataCard: PropTypes.bool,
+    isCard: PropTypes.bool
 };
 export default AddDataCard

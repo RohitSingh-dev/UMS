@@ -151,7 +151,7 @@ const GrievanceList = () => {
                         <Column field="date" header={t("grievanceList.table.columns.date")} />
                         <Column
                             body={() => (
-                                <NavLink className="pr-1" to="/grievance/details"> <span>{t("grievanceList.table.columns.actions")}</span></NavLink>
+                                <NavLink className="pr-1" to="/grievance/details"> <span>{t("grievanceList.table.viewDetails")}</span></NavLink>
                             )}
                             header={t("grievanceList.table.columns.actions")}
                         />

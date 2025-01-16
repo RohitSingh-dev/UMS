@@ -8,18 +8,20 @@ import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import axios from "axios";
 import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
+import {useTranslation} from "react-i18next";
 
 const AddActionButton = () => {
+    const { t } = useTranslation();
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);
     const toast = useRef(null);
     const navigate = useNavigate();
     const [icon, setIcon] = useState("");
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Action Button", url: '/admin/crud/action-button'},
-        {name: "Add Action Button"}
+        { name: t("actionButton.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("actionButton.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("actionButton.breadcrumb.action_button"), url: "/admin/crud/action-button" },
+        { name: t("actionButton.breadcrumb.add_action_button") },
     ];
 
     const {register, handleSubmit, formState: {errors}, setValue} = useForm();

@@ -5,16 +5,18 @@ import {useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import apiCall from "../../../../Axios/APIHelper.jsx";
+import {useTranslation} from "react-i18next";
 
 const AddReligion = () => {
+    const { t } = useTranslation();
     const toast = useRef(null)
     const navigate = useNavigate()
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Religion", url: '/admin/crud/religion'},
-        {name: "Add Religion"}
+        { name: t("religion.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("religion.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("religion.breadcrumb.religion"), url: "/admin/crud/religion" },
+        { name: t("religion.breadcrumb.add_religion") },
     ];
 
     const {register, handleSubmit, formState: {errors}} = useForm();

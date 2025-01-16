@@ -1,9 +1,15 @@
 import CookieHelper from "../../../services/UseCookies.jsx";
 
-import {ROLE_ADMIN, ROLE_BOS, ROLE_COOKIES_NAME, ROLE_STUDENT, ROLE_TEACHER} from "../../../Util/AppConstant.jsx";
+import {
+    ROLE_ADMIN,
+    ROLE_BOS,
+    ROLE_COOKIES_NAME,
+    ROLE_STUDENT,
+    ROLE_SUPER_ADMIN,
+    ROLE_TEACHER
+} from "../../../Util/AppConstant.jsx";
 
 export function HighestRankRoleFunc() {
-
     const getRoleFromCookies = () => {
         const role = CookieHelper.getCookie(ROLE_COOKIES_NAME);
         if (role) {
@@ -11,17 +17,17 @@ export function HighestRankRoleFunc() {
         }
         return null;
     };
-    const roles = getRoleFromCookies();
+    const role = getRoleFromCookies();
 
-    if (roles && roles.length > 0) {
-        const highestRankRole = roles.reduce((prev, current) =>
-            prev.rank > current.rank ? prev : current
-        );
+    console.log("role",role)
 
-        switch (highestRankRole.authority) {
+    if (role != null) {
+        switch (role.authority) {
             case ROLE_STUDENT:
                 return "/student/dashboard";
             case ROLE_ADMIN:
+                return "/admin/dashboard";
+            case ROLE_SUPER_ADMIN:
                 return "/admin/dashboard";
             case ROLE_TEACHER:
                 return "/teacher/dashboard";

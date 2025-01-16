@@ -14,7 +14,12 @@ const initialState = {
     questionConfiguration: [],
     designation: [],
     colleges: [],
-    isValueUpdated: false
+    isValueUpdated: false,
+    genders: [],
+    maritalStatus: [],
+    nationality: [],
+    motherTongues: [],
+    bloodGroups: []
 }
 
 const selectTagOptionsSlice = createSlice({
@@ -48,6 +53,21 @@ const selectTagOptionsSlice = createSlice({
         },
         setQuestionConfiguration: (state, action) => {
             state.questionConfiguration = action.payload
+        },
+        setGenders: (state, action) => {
+            state.genders = action.payload
+        },
+        setMaritalStatus: (state, action) => {
+            state.maritalStatus = action.payload
+        },
+        setNationality: (state, action) => {
+            state.nationality = action.payload
+        },
+        setMotherTongues: (state, action) => {
+            state.motherTongues = action.payload
+        },
+        setBloodGroups: (state, action) => {
+            state.bloodGroups = action.payload
         },
         setActiveDetails: (state, action) => {
             const {courseType, discipline, semester, paper, activityType} = action.payload
@@ -83,6 +103,11 @@ export const {
     setSemester,
     setActiveDetails,
     setDesignations,
-    setColleges
+    setColleges,
+    setGenders,
+    setMaritalStatus,
+    setNationality,
+    setMotherTongues,
+    setBloodGroups
 } = selectTagOptionsSlice.actions
 export default selectTagOptionsSlice.reducer

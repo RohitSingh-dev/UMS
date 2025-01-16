@@ -16,7 +16,7 @@ const GrievanceDetail = () => {
 
   const breadcrumbData = [
     { name: t("grievanceDetail.breadcrumb.dashboard"), url: "/admin/dashboard" },
-    { name: t("grievanceDetail.breadcrumb.grievance"), url: "/admin/crud/grievance" },
+    { name: t("grievanceDetail.breadcrumb.grievance"), url: "/grievance" },
     { name: t("grievanceDetail.breadcrumb.details") },
   ];
 
@@ -51,7 +51,7 @@ const GrievanceDetail = () => {
             name="Manojit Chakravorty"
             icon={userImage}
             date={t("grievanceDetail.grievanceDetailCard.date", { date: "Dec 19, 2024, 4:01 PM (21 hours ago)" })}
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."
           />
         </div>
 
@@ -70,7 +70,7 @@ const GrievanceDetail = () => {
             name="Manojit Chakravorty"
             icon={userImage}
             date={t("grievanceDetail.grievanceDetailCard.date", { date: "Dec 19, 2024, 4:01 PM (21 hours ago)" })}
-            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
           >
             <h5 className="mt-3">{t("grievanceDetail.grievanceDetailCard.uploadItems")}</h5>
             <ul className="upload-files mt-2">

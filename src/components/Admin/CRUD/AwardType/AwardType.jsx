@@ -1,14 +1,24 @@
 import CRUDPage from "../CRUDPage.jsx";
+import {useTranslation} from "react-i18next";
 
 const AwardType = () => {
+    const { t } = useTranslation();
     const apiEndpoints = {
         fetch: '/admin/search-award-type',
         editRecord: '/crud/district/:id/update_state'
     }
 
-    const tableColumns = [
-        {field: "name", header: "Name", sortable: true, editor: true}
+    // Table Columns
+    const fields = [
+        "name"
     ];
+
+    const tableColumns = fields.map((field) => ({
+        field,
+        header: t(`awardType.${field}`),
+        sortable: field !== 'status',
+        editor: field !== 'status',
+    }));
 
 
     const searchConfig = {

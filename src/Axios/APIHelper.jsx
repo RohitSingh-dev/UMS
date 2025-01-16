@@ -18,6 +18,7 @@ const apiCall = async ({
     const finalHeaders = {
         ...headers,
         "Authorization": `Bearer ${token}`,
+        "X-api-key": "your-api-key"
     };
 
     try {
@@ -35,7 +36,6 @@ const apiCall = async ({
         console.log(requestOptions)
 
         const response = await axiosInstance(requestOptions);
-
         return response.data; // Resolve with the response data
     } catch (error) {
         if (retryOnTokenExpired && error.response?.status === 401 && error.response?.data === "JWT token was expired") {

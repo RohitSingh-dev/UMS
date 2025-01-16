@@ -20,7 +20,7 @@ const Menu = () => {
 
     const breadcrumbData = [
         {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
+        {name: "Master Settings", url: '/admin/crud'},
         {name: "Menu"}
     ];
 

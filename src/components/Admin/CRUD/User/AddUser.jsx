@@ -2,8 +2,6 @@ import AdminLayout from "../../AdminLayout.jsx";
 import AddDataCard from "../AddDataCard.jsx";
 import {InputText} from "primereact/inputtext";
 import {Controller, useForm} from "react-hook-form";
-import axios from "axios";
-import CookiesHelper from "../../../../services/UseCookies.jsx";
 import {useEffect, useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import {Dropdown} from "primereact/dropdown";
@@ -11,11 +9,10 @@ import {setColleges, setDesignations, setDisciplines} from "../../../../Redux/se
 import {useDispatch, useSelector} from "react-redux";
 import {Calendar} from "primereact/calendar";
 import moment from "moment";
-import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
+import apiCall from "../../../../Axios/APIHelper.jsx";
 
 
 const AddUser = () => {
-    const token = CookiesHelper.getCookie(JWT_COOKIES_NAME);
     const toast = useRef(null)
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -27,82 +24,59 @@ const AddUser = () => {
 
     const breadcrumbData = [
         {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
+        {name: "Master Settings", url: '/admin/crud'},
         {name: "User", url: '/admin/crud/user'},
         {name: "Add Question Type"}
     ];
 
     useEffect(() => {
-        axios
-            .get("search_data/designations", {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                }
-            })
-            .then((res) => {
-                if (res.status === 200) {
-                    dispatch(setDesignations(res.data));
-                }
+        apiCall({
+            url: "search_data/designations",
+            showLoadingIndicator: false
+        }).then((res) => {
+                    res.data && dispatch(setDesignations(res.data));
             })
             .catch((ex) => console.log(ex));
     }, []);
 
     const onChangeDesignation = (field, e) => {
-        axios
-            .get("search_data/colleges", {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-                params: {
-                    designationId: e.value
-                },
-            })
-            .then((res) => {
-                if (res.status === 200) {
-                    dispatch(setColleges(res.data));
-                }
+        apiCall({
+            url: "search_data/colleges",
+            params: {designationId: e.value},
+            showLoadingIndicator: false
+        }).then((res) => {
+                res.data && dispatch(setColleges(res.data));
+
             })
             .catch((ex) => console.log(ex));
 
-        axios
-            .get("search_data/course_discipline", {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-            .then((res) => {
-                if (res.status === 200) {
-                    dispatch(setDisciplines(res.data));
-                }
+        apiCall({
+            url: "search_data/course_discipline",
+            showLoadingIndicator: false
+        }).then((res) => {
+                res.data && dispatch(setDisciplines(res.data));
+
             })
             .catch((ex) => console.log(ex));
         field.onChange(e.value);
     };
 
     const onSubmitForm = (data) => {
-        axios.post("crud/user/create",
-            data,
-            {
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`,
-                }
-            })
-            .then((res) => {
-                if (res.status === 200) {
-                    toast.current.show({
-                        severity: 'success',
-                        summary: 'Success',
-                        detail: 'User successfully created',
-                        life: 3000
-                    });
-                    setTimeout(() => {
-                        navigate("/admin/crud/user");
-                    }, 3000)
-                }
+        apiCall({
+            url: "crud/user/create",
+            data: data,
+            method: 'post',
+            showLoadingIndicator: false
+        }).then(() => {
+                toast.current.show({
+                    severity: 'success',
+                    summary: 'Success',
+                    detail: 'User successfully created',
+                    life: 3000
+                });
+                setTimeout(() => {
+                    navigate("/admin/crud/user");
+                }, 3000)
             })
             .catch((error) => {
                 toast.current.show({severity: 'error', summary: 'Error', detail: error.response.data, life: 3000});

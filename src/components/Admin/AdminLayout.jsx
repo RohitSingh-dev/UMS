@@ -11,7 +11,7 @@ const AdminLayout = ({children, breadcrumbItems, breadCrumbHeader, dialogBtn, di
     return (
         <AllLayout>
             {toast && <Toast ref={toast}/>}
-            <DraggableOverlay/>
+            {/*<DraggableOverlay/>*/}
             <AllSideBarNavLink>
                 <SideNavBar/>
             </AllSideBarNavLink>

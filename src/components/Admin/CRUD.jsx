@@ -20,7 +20,23 @@ const CRUD = () => {
                 <LinkButton url='state' name='State'/>
                 <LinkButton url='district' name='District'/>
                 <LinkButton url='award-type' name='Award Type'/>
+                <LinkButton url='program' name='Program'/>
+                <LinkButton url='program-offer' name='Program Offer'/>
+                <LinkButton url='term' name='Term'/>
+                <LinkButton url='stream' name='Stream'/>
+                <LinkButton url='academic-session' name='Academic Session'/>
                 <LinkButton url='grivence' name='Grivence'/>
+                <LinkButton url='course-offer' name='Course Offer'/>
+                <LinkButton url='course-offer-faculty-mapping' name='Course Offer Faculty Mapping'/>
+                <LinkButton url='student-personal-details' name='Student Personal Details'/>
+                <LinkButton url='activity-master-list' name='Activity Master List'/>
+                <LinkButton url='specialization' name='Specialization'/>
+                <LinkButton url='concentration' name='Concentration'/>
+                <LinkButton url='discipline' name='Discipline'/>
+                <LinkButton url='courses' name='Courses'/>
+                <LinkButton url='registration' name='Registration'/>
+                <LinkButton url='batch' name='Batch'/>
+                <LinkButton url='student-registration' name='Student Registration'/>
             </div>
         </AdminLayout>
     )

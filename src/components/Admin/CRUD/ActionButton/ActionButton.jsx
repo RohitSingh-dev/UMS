@@ -1,6 +1,8 @@
 import CRUDPage from "../CRUDPage.jsx";
+import {useTranslation} from "react-i18next";
 
 const ActionButton = () => {
+    const { t } = useTranslation();
 
     const apiEndpoints = {
         fetch: '/search_data/action-button/search',
@@ -8,12 +10,20 @@ const ActionButton = () => {
         toggleStatus: '/crud/action-button/change_status',
     }
 
-    const tableColumns = [
-        {field: "name", header: "Name", sortable: true, editor: true},
-        {field: "path", header: "Path", sortable: true, editor: true},
-        {field: "icon", header: "Icon", editor: true},
-        {field: "isActive", header: "Status"}
+    // Table Columns
+    const fields = [
+        "name",
+        "path",
+        "icon",
+        "isActive"
     ];
+
+    const tableColumns = fields.map((field) => ({
+        field,
+        header: t(`actionButton.${field}`),
+        sortable: field !== 'status',
+        editor: field !== 'status',
+    }));
 
 
     const searchConfig = {

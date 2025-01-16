@@ -1,16 +1,27 @@
 import CRUDPage from "../CRUDPage.jsx";
+import {useTranslation} from "react-i18next";
 
 const District = () => {
+    const { t } = useTranslation();
+
     const apiEndpoints = {
         fetch: '/admin/search-district',
         editRecord: '/crud/district/:id/update_state'
     }
 
-    const tableColumns = [
-        {field: "code", header: "Code", sortable: true, editor: true},
-        {field: "name", header: "Name", sortable: true, editor: true},
-        {field: "shortName", header: "Short Name", sortable: true, editor: true}
+    // Table Columns
+    const fields = [
+        "code",
+        "name",
+        "shortName"
     ];
+
+    const tableColumns = fields.map((field) => ({
+        field,
+        header: t(`district.${field}`),
+        sortable: field !== 'status',
+        editor: field !== 'status',
+    }));
 
 
     const searchConfig = {

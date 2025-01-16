@@ -9,12 +9,12 @@ html {
 }
 
 body {
-    background-color: var(--main_bg_color);
+    background-color: var(--color_gray_more_lighter);
     color: var(--color_gray);
     font-family: var(--custom-font-family);
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
-    line-height: 1.5;
+    line-height: 16px;
     overflow-x: hidden;
 }
 
@@ -1777,9 +1777,9 @@ input:checked + .slider:before {
 
 .small-card {
 
-    background-color: var(--color_gray_lighter);
+    background-color: var(--sidebar_font);
     margin-bottom: 30px;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
     height: calc(100% - 30px);
     box-shadow: none;
@@ -2905,7 +2905,7 @@ div.dataTables_wrapper div.dataTables_info {
     width: 260px;
     z-index: 1;
     transition: all 0.2s ease-in-out;
-    background-color: var(--sidebar_bg);
+    background-color: #dfd5d5;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -2929,7 +2929,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 
 .header .header-left .logo img {
-    max-height: 40px;
+    height: 60px !important;
 }
 
 .header-left .logo.logo-small {
@@ -3250,7 +3250,7 @@ footer p {
 -----------------------*/
 
 .sidebar {
-    background-color: var(--sidebar_bg);
+    background-color: #dfd5d5;
     bottom: 0;
     left: 0;
     margin-top: 0;
@@ -3286,10 +3286,10 @@ footer p {
 }
 
 .sidebar-menu li a {
-    color: var(--sidebar_font);
+    color: #213153;
     display: block;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     height: auto;
     padding: 0 20px;
 }
@@ -3307,7 +3307,7 @@ footer p {
 
 .sidebar-menu li > a.active {
     background-color: var(--color_gray_more_lighter);
-    color: var(--primary_color);
+    color: #f0093f;
     position: relative;
     margin: 0px -15px !important;
     padding-left: 30px;
@@ -3331,7 +3331,7 @@ footer p {
 } */
 
 .menu-title {
-    color: var(--sidebar_font);
+    color: var(--color_gray_light);
     display: flex;
     font-size: 14px;
     opacity: 1;
@@ -7983,4 +7983,29 @@ input[type="color"] {
     top: -10px;
     font-weight: 600;
 
+}
+.scrollable-list {
+    max-height: 350px; /* Set the maximum height for scrolling */
+    overflow-y: auto;  /* Enable vertical scrolling */
+    overflow-x: hidden; /* Disable horizontal scrolling */
+  }
+
+  .w-100{
+    width: 100% !important;
+  }
+  .nx-confirm-button-ok {
+    background: #810532 !important;
+  }
+  .notiflix-confirm-head h5 {
+    color: #000 !important;
+  }
+
+.highlight-row {
+    background-color: rgba(255, 0, 0, 0.2) !important; /* Light red */
+    color: black; /* Adjust text color if needed */
+}
+
+.row-hover:hover {
+    background-color: rgba(0, 255, 0, 0.2) !important; /* Light green */
+    cursor: pointer;
 }

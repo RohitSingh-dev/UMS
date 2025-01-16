@@ -5,16 +5,18 @@ import apiCall from "../../../../Axios/APIHelper.jsx";
 import AdminLayout from "../../AdminLayout.jsx";
 import AddDataCard from "../AddDataCard.jsx";
 import {InputText} from "primereact/inputtext";
+import {useTranslation} from "react-i18next";
 
 const AddDistrict = () => {
+    const { t } = useTranslation();
     const toast = useRef(null);
     const navigate = useNavigate();
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "District", url: '/admin/crud/district'},
-        {name: "Add District"}
+        { name: t("district.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("district.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("district.breadcrumb.district"), url: "/admin/crud/district" },
+        { name: t("district.breadcrumb.add_district") },
     ];
 
     const {register, handleSubmit, formState: {errors}} = useForm();

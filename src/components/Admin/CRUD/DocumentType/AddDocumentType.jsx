@@ -5,16 +5,18 @@ import {useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import apiCall from "../../../../Axios/APIHelper.jsx";
+import {useTranslation} from "react-i18next";
 
 const AddDocumentType = () => {
+    const { t } = useTranslation();
     const toast = useRef(null);
     const navigate = useNavigate();
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Document Type", url: '/admin/crud/document-type'},
-        {name: "Add Document Type"}
+        { name: t("documentType.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("documentType.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("documentType.breadcrumb.document_type"), url: "/admin/crud/document-type" },
+        { name: t("documentType.breadcrumb.add_document_type") },
     ];
 
     const {register, handleSubmit, formState: {errors}} = useForm();

@@ -1,4 +1,4 @@
-import {faChevronRight, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {faChevronRight, faCog, faHome, faList, faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { useLocation, useNavigate} from "react-router-dom";
 import {logOut} from "../../Util/commonFunction.jsx";
@@ -6,6 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {setMenus} from "../../Redux/sidebarSlice.jsx";
 import apiCall from "../../Axios/APIHelper.jsx";
+import { NavLink } from "react-router-dom";
 
 
 function SideNavBar() {
@@ -17,6 +18,7 @@ function SideNavBar() {
         const savedOpenMenus = localStorage.getItem('openMenus');
         return savedOpenMenus ? new Set(JSON.parse(savedOpenMenus)) : new Set();
     });
+    const sideBarClass = useSelector((state) => state.sidebar.sideBarClass);
     const location = useLocation(); // Get the current path
 
     // Save open menus to localStorage whenever they change
@@ -93,11 +95,45 @@ function SideNavBar() {
         <ul>
             <li className="menu-title py-1">MAIN MENU</li>
             {renderMenus(menus)}
+            {/* <li>
+                <NavLink to="/admin/crud">Crud Pages</NavLink>
+            </li> */}
+            {sideBarClass !== "mini-sidebar"? (
+            <>
+                <li>
+                    <NavLink to="/admin/dashboard">
+                        <FontAwesomeIcon icon="fas fa-th-large" />
+                        <span>Dashboard</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/admin/crud">
+                        <FontAwesomeIcon icon="fa fa-database" />
+                        <span>Master Settings</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to="/admin/master-report">
+                        <FontAwesomeIcon icon="fa fa-file" />
+                        <span>Master Report</span>
+                    </NavLink>
+                </li>
+            </>
+                ) : <>
+                <li>
+                    <NavLink to="/admin/dashboard"><FontAwesomeIcon icon="fas fa-th-large" /></NavLink>
+                </li>
+                <li>
+                    <NavLink to="/admin/crud"><FontAwesomeIcon icon="fa fa-database" /></NavLink>
+                </li>
+                <li>
+                    <NavLink to="/admin/master-report"><FontAwesomeIcon icon="fa fa-file" /></NavLink>
+                </li></>}
             <li className="menu-title">OTHERS</li>
             <li>
                 <a href="#" onClick={() => logOut(navigate,dispatch)}>
                     <FontAwesomeIcon icon={faSignOutAlt}/>
-                    <span>SignOut</span>
+                    <span>Log Out</span>
                 </a>
             </li>
         </ul>

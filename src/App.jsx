@@ -79,7 +79,7 @@ function App() {
                     }
                 />
 
-                {/* to do add in the protected route */}
+                {/* FIXME: add in the protected route */}
                 <Route
                     path="/grievance"
                     element={

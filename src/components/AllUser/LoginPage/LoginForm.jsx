@@ -52,7 +52,12 @@ function LoginForm({onToggle}) {
             };
             const url = "auth/login";
             axios
-                .post(url, data)
+                .post(url, data,
+                    {
+                        headers: {
+                            "X-api-key": "tezt"
+                        }
+                    })
                 .then((res) => loginAndSaveTheData(res))
                 .catch((ex) => {
                     console.log(ex);
@@ -71,14 +76,14 @@ function LoginForm({onToggle}) {
         if (res.status === 200) {
             CookieHelper.setCookies(res.data.refreshToken, REFRESH_TOKEN_COOKIES_NAME);
             CookieHelper.setCookies(res.data.token, JWT_COOKIES_NAME);
-            CookieHelper.setCookies(JSON.stringify(res.data.roles), ROLE_COOKIES_NAME);
+            CookieHelper.setCookies(JSON.stringify(res.data.role), ROLE_COOKIES_NAME);
             CookieHelper.setCookies(res.data.fullName, USERNAME_COOKIES_NAME);
-            saveBrandingColor();
+            // saveBrandingColor();
             const highestRankRoute = HighestRankRoleFunc();
+            console.log(highestRankRoute)
             navigate(highestRankRoute);
         }
     }
-
 
 
     function saveBrandingColor() {
@@ -89,13 +94,13 @@ function LoginForm({onToggle}) {
                     Authorization: `Bearer ${CookieHelper.getCookie(JWT_COOKIES_NAME)}`,
                 }
             }).then((res) => {
-                if(res.status === 200){
-                    document.documentElement.style.setProperty('--primary_color', res.data.primaryColor);
-                    document.documentElement.style.setProperty('--secondary_color', res.data.secondaryColor);
-                    document.documentElement.style.setProperty('--main_bg_color', res.data.mainBgColor);
-                    document.documentElement.style.setProperty('--sidebar_bg', res.data.sidebarBgColor);
-                    document.documentElement.style.setProperty('--sidebar_font', res.data.sidebarFontColor);
-                }
+            if (res.status === 200) {
+                document.documentElement.style.setProperty('--primary_color', res.data.primaryColor);
+                document.documentElement.style.setProperty('--secondary_color', res.data.secondaryColor);
+                document.documentElement.style.setProperty('--main_bg_color', res.data.mainBgColor);
+                document.documentElement.style.setProperty('--sidebar_bg', res.data.sidebarBgColor);
+                document.documentElement.style.setProperty('--sidebar_font', res.data.sidebarFontColor);
+            }
         }).catch((ex) => {
             console.log(ex);
             toast.current.show({
@@ -141,7 +146,7 @@ function LoginForm({onToggle}) {
                                     <button
                                         className="auth-content-eye-btn btn"
                                         onClick={() => handleTogglePassword()}
-                                    tabIndex="-1">
+                                        tabIndex="-1">
                                         <i>
                                             <FontAwesomeIcon
                                                 icon={showPassword ? faEye : faEyeSlash}
@@ -152,7 +157,7 @@ function LoginForm({onToggle}) {
                             </div>
                         </div>
                         <div className="form-group col-md-12 px-0">
-                            <NewCaptcha ref={captchaRef} />
+                            <NewCaptcha ref={captchaRef}/>
                         </div>
 
                         <div className="row">
@@ -174,7 +179,7 @@ function LoginForm({onToggle}) {
     );
 }
 
-LoginForm.propTypes ={
+LoginForm.propTypes = {
     onToggle: PropTypes.func.isRequired
 }
 

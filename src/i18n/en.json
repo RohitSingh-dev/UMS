@@ -1,5 +1,8 @@
 {
     "translation": {
+        "app": {
+            "title": "Praxis"
+        },
         "grievance": {
             "header": "Grievance",
             "fields": {
@@ -173,6 +176,501 @@
             "close": "Close",
             "submit": "Submit",
             "edit": "Edit"
+        },
+        "courseOffer": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "course_offer": "Course Offer",
+                "add_course_offer": "Add Course Offer"
+            },
+            "header": "Course Offer",
+            "courseCode": "Course Code",
+            "programOffer":"Program Offer",
+            "comments": "Comments",
+            "courseObjective": "Course Objective",
+            "courseOfferCode": "Course Offer Code",
+            "term": "Term",
+            "credit": "Credit",
+            "academicSession": "Academic Session",
+            "academic_session_id": "Academic Session Id",
+            "concentration": "Concentration",
+            "concentration_id": "Concentration Id",
+            "course": "Course",
+            "course_id": "Course Id",
+            "courseType": "Course Type",
+            "course_type_id": "Course Type Id",
+            "discipline": "Program Offer",
+            "discipline_id": "Discipline Id",
+            "specialization": "Specialization",
+            "specialization_id": "Specialization Id"
+        },
+        "validationMessages": {
+            "required": "{{field}} is required",
+            "maxLength": "Maximum length is {{max}} characters",
+            "positiveNumber": "{{field}} must be a positive number"
+        },
+        "courseOfferFacultyMapping": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "course_offer_faculty_mapping": "Course Offer Faculty Mapping",
+                "add_course_offer_faculty_mapping": "Add Course Offer Faculty Mapping"
+            },
+            "header": "Course Offer Faculty Mapping",
+            "faculty_type": "Faculty Type",
+            "course_offer": "Course Offer",
+            "faculty": "Faculty",
+            "primary": "Primary",
+            "secondary": "Secondary"
+        },
+        "toast": {
+            "success": "Success",
+            "error": "Error",
+            "documentTypeCreated": "Document Type successfully created",
+            "genericError": "An error occurred"
+        },
+        "academicSession": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "academic_session": "Academic Session",
+                "add_academic_session": "Add Academic Session"
+            },
+            "header": "Academic Session",
+            "academicSessionCode": "Academic Session Code",
+            "endTerm": "End Term",
+            "midTerm": "Mid Term",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "programOfferId": "Program Offer Id",
+            "programOffer": "Program Offer",
+            "program": "Program",
+            "termId": "Term Id",
+            "termName": "Term Name",
+            "status": "Status"
+        },
+        "studentPersonalDetail": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "student_personal_detail": "Student Personal Detail",
+                "add_student_personal_detail": "Add Student Personal Detail"
+            },
+            "header": "Student Personal Detail",
+            "aadhar_number": "Aadhar Number",
+            "blood_group": "Blood Group",
+            "date_of_birth": "Date of Birth",
+            "father_name": "Father Name",
+            "gender": "Gender",
+            "identification_mark": "Identification Mark",
+            "marital_status": "Marital Status",
+            "mother_name": "Mother Name",
+            "mother_tongue": "Mother Tongue",
+            "nationality": "Nationality",
+            "pan_number": "Pan Number",
+            "passport_number": "Passport Number",
+            "spouse_name": "Spouse Name",
+            "admission_category_id": "Admission Category Id",
+            "religion_id": "Religion Id",
+            "social_category_id": "Social Category Id",
+            "user_id": "User Id"
+        },
+        "activityMasterList": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "activity_master_list": "Activity Master List",
+                "add_activity_master_list": "Add Activity Master List"
+            },
+            "header": "Activity Master List",
+            "university_name": "University Name",
+            "activity_id": "Activity Id",
+            "paper_id": "Paper Id",
+            "paper_code": "Paper Code",
+            "full_marks": "Full Marks",
+            "activity_type": "Activity Type",
+            "activity_session": "Activity Session"
+        },
+        "specialization": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "specialization": "Specialization",
+                "add_specialization": "Add Specialization"
+            },
+            "header": "Specialization",
+
+                "name": "Name",
+                "specialization_code": "Specialization Code",
+                "program_offer_id": "Programme Offer Id",
+                "programOfferName": "Programme Offer Name",
+                "programName": "Programme Name",
+                "stream_id": "Stream Id",
+                "streamName": "Area Name",
+                "specializationCode": "Specialization Code",
+                "is_active": "Status",
+
+            "validationMessages": {
+                "required": "{{field}} is required",
+                "maxLength": "Maximum length is {{max}} characters",
+                "positiveNumber": "{{field}} must be a positive number"
+            },
+            "toast": {
+                "success": "Success",
+                "error": "Error",
+                "successDetail": "Specialization successfully created",
+                "errorDetail": "An error occurred while creating the specialization"
+            }
+        },
+        "concentration": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "concentration": "Concentration",
+                "add_concentration": "Add Concentration"
+            },
+            "header": "Concentration",
+
+            "name": "Name",
+            "connection_code": "Concentration Code",
+            "specializationName": "Specialization Name",
+            "is_active": "Status",
+            "toast": {
+                "success": "Success",
+                "successDetail": "Concentration successfully created",
+                "error": "Error",
+                "genericError": "An error occurred"
+            },
+
+            "validationMessages": {
+                "required": "{{field}} is required"
+            },
+            "general": {
+                "close": "Close",
+                "submit": "Submit",
+                "edit": "Edit"
+            }
+        },
+        "discipline": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "discipline": "Discipline",
+                "add_discipline": "Add Discipline"
+            },
+            "header": "Discipline",
+
+            "name": "Name",
+            "disciplineCode": "Discipline Code",
+            "noOfSemesterInterval": "No Of Semester Interval",
+            "number": "Number",
+            "shortCode": "Short Code",
+            "programe_offer_id": "programe Offer Id",
+            "program": "programe",
+            "is_active": "Status",
+            "toast": {
+                "success": "Success",
+                "successDetail": "Discipline successfully created",
+                "error": "Error",
+                "genericError": "An error occurred"
+            },
+            "validationMessages": {
+                "required": "{{field}} is required"
+            }
+        },
+        "courses": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "courses": "Courses",
+                "add_courses": "Add Courses"
+            },
+            "header": "Courses",
+
+            "course_id_code": "Course Id Code",
+            "course_objective": "Course Objective",
+            "name": "Name",
+            "short_name": "Short Name",
+            "syllabus": "Syllabus",
+            "is_active": "Status",
+            "course_type_code": "Course Type Code",
+            "toast": {
+                "success": "Success",
+                "successDetail": "Courses successfully created",
+                "error": "Error",
+                "genericError": "An error occurred"
+            }
+        },
+        "Registration": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "courses": "Enrollment",
+                "add_courses": "Add Registration",
+                "add_registration_by_student": "Enrollment By Student",
+                "add_registration_by_course": "Enrollment By Course"
+            },
+            "header": "Registration",
+            "name": "Name",
+            "roll": "Roll",
+            "program": "Program",
+            "academic_year": "Academic Session",
+            "batch": "Batch",
+            "term": "Term",
+            "course": "Course",
+            "course_type": "Course Type",
+            "course_code": "Course Code",
+            "specialization_name": "Specialization Name",
+            "concentration": "Concentration",
+            "select_all": "Select All",
+            "select": "Select",
+            "student_id": "Student Id",
+            "no_courses_available": "No Courses Available",
+            "toast": {
+                "success": "Success",
+                "successDetail": "Registration successfully created",
+                "error": "Error",
+                "genericError": "An error occurred"
+            }
+        },
+        "masterSettings" : {
+            "breadcrumb": {
+                "dashboard": "Dashboard"
+            },
+            "header": "Master Settings",
+            "modules": {
+                "program": "Program",
+                "programOffer": "Program Offer",
+                "term": "Term",
+                "academicSession": "Academic Session",
+                "stream": "Area",
+                "registration": "Registration",
+                "specialization": "Specialization",
+                "concentration": "Concentration",
+                "courses": "Courses",
+                "courseType": "Course Type",
+                "courseOffer": "Course Offer",
+                "courseOfferFacultyMapping": "Course Offer Faculty Mapping"
+            }
+        },
+        "batch": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "batch": "Batch",
+                "add_batch": "Add Batch"
+            },
+            "header": "Batch",
+            "name": "Name",
+            "year": "Year"
+        },
+        "documentType": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "document_type": "Document Type",
+                "add_document_type": "Add Document Type"
+            },
+            "header": "Document Type",
+            "description": "Description",
+            "type": "Type"
+        },
+        "actionButton": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "action_button": "Action Button",
+                "add_action_button": "Add Action Button"
+            },
+            "header": "Action Button",
+            "name": "Name",
+            "path": "Path",
+            "icon": "Icon",
+            "isActive": "Status"
+        },
+        "awardType": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "award_type": "Award Type",
+                "add_award_type": "Add Award Type"
+            },
+            "header": "Award Type",
+            "name": "Name"
+        },
+        "district": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "district": "District",
+                "add_district": "Add District"
+            },
+            "header": "District",
+            "code": "Code",
+            "name": "Name",
+            "shortName": "Short Name"
+        },
+        "program": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "program": "Program",
+                "add_program": "Add Program"
+            },
+            "header": "Program",
+            "longName": "Long Name",
+            "name": "Name",
+            "programCode": "Program Code"
+        },
+        "courseType": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "CRUD",
+                "courseType": "Course Type",
+                "addCourseType": "Add Course Type"
+            },
+            "header": "Course Type",
+            "shortName": "Short Name",
+            "name": "Name",
+            "courseTypeCode": "Course Type Code"
+        },
+        "programOffer": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "program_offer": "Program Offer",
+                "add_program_offer": "Add Program Offer"
+            },
+            "header": "Program Offer",
+            "id": "Program Id",
+            "program.name": "Long Name",
+            "programOfferCode": "Program Offer Code",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "status": "Status"
+        },
+        "questionType": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "question_type": "Question Type",
+                "add_question_type": "Add Question Type"
+            },
+            "header": "Question Type",
+            "type": "Type",
+            "is_active": "Status"
+        },
+        "religion": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "religion": "Religion",
+                "add_religion": "Add Religion"
+            },
+            "header": "Religion",
+            "name": "Name",
+            "is_active": "Status"
+        },
+        "socialCategory": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "social_category": "Social Category",
+                "add_social_category": "Add Social Category"
+            },
+            "header": "Social Category",
+            "name": "Name",
+            "is_certificate_required": "Is Certificate Required"
+        },
+        "state": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud": "Master Settings",
+                "state": "State",
+                "add_state": "Add State"
+            },
+            "header": "State",
+            "code": "Code",
+            "name": "Name",
+            "shortName": "Short Name"
+        },
+        "student_registration": {
+            "breadcrumb": {
+                "dashboard": "Dashboard",
+                "crud":"Master Settings",
+                "student_registration": "Student Registation",
+                "add_student_registration": "Add Student Registation"
+            },
+            "header": "Student Registration",
+
+            "student_id": "Student Id",
+            "first_name": "First Name",
+            "last_name": "Last Name",
+            "discipline": "Program Offer",
+            "section": "Section",
+            "st_nick_name": "Student Nick Name",
+            "father_name": "Father's Name",
+            "qualification": "Qualification",
+            "blood_group": "Blood Group",
+            "date_of_birth": "Date of Birth",
+            "place_of_birth": "Place of Birth",
+            "nationality": "Nationality",
+            "category": "Category",
+            "residential": "Residential",
+            "current_address": "Current Address",
+            "city": "City",
+            "pin": "PIN",
+            "pbs_email": "PBS Email",
+            "alt_email": "Alt Email",
+            "sex": "Sex",
+            "batch": "Batch",
+            "status": "Status",
+            "mother_tongue": "Mother Tongue",
+            "sponsored": "Sponsored",
+            "state": "State",
+            "religion": "Religion",
+            "room_no": "Room No",
+            "phone": "Phone",
+            "home_page": "Home Page",
+            "permanent_address":"Permanent Address",
+            "city_p": "City",
+            "pin_p": "PIN",
+            "phone_p": "Phone",
+            "g_name": "Guardian Name",
+            "g_phone": "Guardian Phone",
+            "total_work_exp": "Total Work Experience(Months)",
+            "designation": "Designation",
+            "company_name": "Company Name",
+            "company_address": "Company Address",
+            "city_company": "City",
+            "pin_company": "PIN",
+            "phone_company": "Phone",
+            "area_specialization1": "Area Specialization1",
+            "area_specialization2": "Area Specialization2",
+            "pbs_co_cur_act": "PBS Co_Cur Act",
+            "pbs_co_email": "PBS Co_Email",
+            "pbs_co_webpage": "PBS Co_Webpage",
+            "hobbies": "Hobbies",
+            "achievements": "Achievements",
+
+            "is_active": "Status",
+
+            "validationMessages": {
+                "required": "{{field}} is required",
+                "maxLength": "Maximum length is {{max}} characters",
+                "positiveNumber": "{{field}} must be a positive number"
+            },
+            "toast": {
+                "success": "Success",
+                "error": "Error",
+                "successDetail": "Specialization successfully created",
+                "errorDetail": "An error occurred while creating the specialization"
+            }
+        },
+        "enrollment": {
+            "header": "Registration",
+            "title": "Student Enrollment"
         }
     }
 }

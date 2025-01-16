@@ -8,18 +8,20 @@ import AdminLayout from "../../AdminLayout.jsx";
 import AddDataCard from "../AddDataCard.jsx";
 import {InputText} from "primereact/inputtext";
 import {Dropdown} from "primereact/dropdown";
+import {useTranslation} from "react-i18next";
 
 const AddSocialCategory = () => {
+    const { t } = useTranslation();
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);
     const toast = useRef(null);
     const [selectedColumn, setSelectedColumn] = useState(null);
     const navigate = useNavigate();
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Social Category", url: '/admin/crud/social-category'},
-        {name: "Add Social Category"}
+        { name: t("socialCategory.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("socialCategory.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("socialCategory.breadcrumb.social_category"), url: "/admin/crud/social-category" },
+        { name: t("socialCategory.breadcrumb.add_social_category") },
     ];
 
     const columnOptions = [

@@ -7,18 +7,20 @@ import CookieHelper from "../../../../services/UseCookies.jsx";
 import {useRef} from "react";
 import {useNavigate} from "react-router-dom";
 import {JWT_COOKIES_NAME} from "../../../../Util/AppConstant.jsx";
+import {useTranslation} from "react-i18next";
 
 
 const AddQuestionType = () => {
+    const { t } = useTranslation();
     const token = CookieHelper.getCookie(JWT_COOKIES_NAME);
     const toast = useRef(null)
     const navigate = useNavigate()
 
     const breadcrumbData = [
-        {name: "Dashboard", url: '/admin/dashboard'},
-        {name: "CRUD", url: '/admin/crud'},
-        {name: "Question Type", url: '/admin/crud/question-types'},
-        {name: "Add Question Type"}
+        { name: t("questionType.breadcrumb.dashboard"), url: "/admin/dashboard" },
+        { name: t("questionType.breadcrumb.crud"), url: "/admin/crud" },
+        { name: t("questionType.breadcrumb.question_type"), url: "/admin/crud/question-type" },
+        { name: t("questionType.breadcrumb.add_question_type") },
     ];
 
     const {register, handleSubmit, formState: {errors}} = useForm();
